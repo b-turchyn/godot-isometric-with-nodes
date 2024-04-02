@@ -17,8 +17,12 @@ config/icon="res://icon.svg"
 
 [display]
 
-window/size/mode=2
 window/stretch/mode="canvas_items"
+
+[editor]
+
+movie_writer/movie_file="/Users/lightstalker/isometric-with-nodes/after.avi"
+movie_writer/fps=30
 
 [rendering]
 

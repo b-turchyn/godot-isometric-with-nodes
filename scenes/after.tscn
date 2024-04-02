@@ -1,18 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://hklm4gf8edr"]
+[gd_scene load_steps=7 format=3 uid="uid://hklm4gf8edr"]
 
+[ext_resource type="TileSet" uid="uid://d1c3j5a2o24wr" path="res://assets/tileset.tres" id="1_iggu7"]
 [ext_resource type="Texture2D" uid="uid://c3h4fbwcaiqq1" path="res://assets/tile.png" id="2_dg6ar"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xycan"]
-texture = ExtResource("2_dg6ar")
-texture_region_size = Vector2i(256, 256)
-0:0/0 = 0
-0:0/0/texture_origin = Vector2i(0, -64)
-0:1/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_pqxa6"]
-tile_shape = 1
-tile_size = Vector2i(256, 128)
-sources/0 = SubResource("TileSetAtlasSource_xycan")
 
 [sub_resource type="Animation" id="Animation_wwm2p"]
 length = 0.001
@@ -24,7 +13,7 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-1300, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(2.08165e-12, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/1/type = "bezier"
@@ -81,7 +70,7 @@ _data = {
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
-tile_set = SubResource("TileSet_pqxa6")
+tile_set = ExtResource("1_iggu7")
 format = 2
 layer_0/y_sort_enabled = true
 layer_0/tile_data = PackedInt32Array(-262145, 0, 0, -196609, 0, 0, -131074, 0, 0, -65538, 0, 0, -3, 0, 0, 65534, 0, 0, -2, 0, 0, -65537, 0, 0, -131073, 0, 0, -262144, 0, 0, -196608, 0, 0, -131072, 0, 0, -65536, 0, 0, -131071, 0, 0, -65535, 0, 0, 1, 0, 0, 65536, 0, 0, 0, 0, 0, 131071, 0, 0, 131072, 0, 0, 262143, 0, 0, 196607, 0, 0, 131070, 0, 0, 65535, 0, 0)
@@ -96,13 +85,13 @@ texture = ExtResource("2_dg6ar")
 offset = Vector2(2.08165e-12, 64)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(2.97984e-12, -1300)
-zoom = Vector2(0.34, 0.34)
+position = Vector2(2.08165e-12, 2.08165e-12)
+zoom = Vector2(0.5, 0.5)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_7hl8h")
 }
-autoplay = "move"
+autoplay = "tile_anim"
 next/move = &"tile_anim"

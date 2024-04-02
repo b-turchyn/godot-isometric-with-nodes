@@ -13,7 +13,7 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-1300, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(2.08165e-12, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/1/type = "bezier"
@@ -83,13 +83,14 @@ texture = ExtResource("1_i2tkd")
 offset = Vector2(2.08165e-12, 64)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(2.97984e-12, -1300)
-zoom = Vector2(0.34, 0.34)
+position = Vector2(2.97984e-12, 2.08165e-12)
+zoom = Vector2(0.5, 0.5)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_7hl8h")
 }
-autoplay = "move"
+autoplay = "tile_anim"
+next/RESET = &"tile_anim"
 next/move = &"tile_anim"
